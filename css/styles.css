@@ -1,0 +1,371 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --header-font-size: 40px;
+  --title-font-size: 28px;
+  --subtitle-font-size: 22px;
+  --text-font-szie: 16px;
+
+  --primary-background-color: #040404;
+  --secondary-background-color: #616161;
+  --primary-text-color: white;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-background-color);
+  font-family: 'Playfair Display', serif;
+  color: var(--primary-text-color);
+}
+
+#app {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  width: 100%;
+  height: 100%;
+}
+
+img {
+  max-width: 100%;
+}
+
+.solid-btn {
+  height: auto;
+  background-color: var(--primary-text-color);
+  color: #040404;
+  padding: 15px 30px;
+}
+
+.fa {
+  margin-right: 20px;
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: var(--secondary-background-color);
+}
+
+header .logo {
+  display: none;
+}
+
+header ul li {
+  margin: 0.5rem 0.5rem;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#main-banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+#main-banner > * {
+  margin: 1.5rem 0;
+}
+
+#main-banner h1 {
+  font-size: var(--header-font-size);
+  letter-spacing: 0.2rem;
+  line-height: 4rem;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 1rem 0;
+  width: 100%;
+}
+
+section > * {
+  margin: 0.75rem 0;
+}
+
+section h1 {
+  font-size: var(--title-font-size);
+}
+
+section p {
+  text-align: justify;
+  color: var(--secondary-background-color);
+}
+
+.horizontal-line {
+  height: 1px;
+  background-color: var(--secondary-background-color);
+  width: 65%;
+}
+
+#skillbar-container {
+  width: 100%;
+}
+
+#skillbar-container h4 {
+  color: var(--secondary-background-color);
+  letter-spacing: 0.25rem;
+}
+
+#skillbar-container > * {
+  margin: 1rem 0;
+}
+
+.skillbars {
+  width: 100%;
+  background-color: var(--primary-text-color);
+  height: 25px;
+}
+
+.skill-length {
+  height: 25px;
+  background-color: var(--secondary-background-color);
+}
+
+#photography {
+  width: 95%;
+}
+
+#web-design {
+  width: 85%;
+}
+
+#photoshop {
+  width: 80%;
+}
+
+#reputation-container {
+  background-color: var(--primary-text-color);
+  color: var(--primary-background-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.reputation-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#reputation-container > * {
+  margin: 1.5rem 0;
+}
+
+.price-table {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.table-header {
+  color: #8b8b8b;
+  background-color: #585858;
+  font-size: var(--title-font-size);
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.table-rows {
+  background-color: #999999;
+  color: var(--primary-background-color);
+  width: 100%;
+  height: 70px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.special-rows {
+  height: 120px;
+  font-size: var(--title-font-size);
+}
+
+.special-rows span {
+  color: var(--secondary-background-color);
+  font-size: 1rem;
+}
+
+.last-row {
+  height: 65px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #919191;
+}
+
+.sign-up-btn {
+  background-color: #999999;
+}
+
+.circle-img {
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+  border-radius: 50%;
+  text-align: center;
+  float: left;
+  margin: 5px;
+  shape-outside: circle();
+}
+
+.testimonial-card {
+  margin: 30px 0;
+}
+
+.testimonial-card p {
+  font-size: var(--subtitle-font-size);
+}
+
+#image-1 {
+  background-image: url('../day7_challanges/images/bandmember.jpg');
+  background-size: contain;
+}
+
+#image-2 {
+  background-image: url('../day7_challanges/images/avatar_g2.jpg');
+  background-size: contain;
+}
+
+.photo-list > * {
+  margin: 5px 0;
+}
+
+.fa-white {
+  color: white;
+}
+
+#contact-info {
+  font-size: var(--subtitle-font-size);
+}
+
+#contact-info > * {
+  margin: 25px 0;
+}
+
+#form-list input {
+  width: 85%;
+  height: 50px;
+  padding: 10px;
+}
+
+#form-list .send-btn {
+  width: 60%;
+}
+
+#form-list > * {
+  margin-top: 20px;
+}
+
+#footer-btn {
+  margin-top: 5rem;
+  color: var(--secondary-background-color);
+}
+
+@media (min-width: 1000px) {
+
+  #app {
+    width: 70%;
+    padding-left: 100px;
+  }
+
+  header {
+    position: fixed;
+    top: 8vh;
+    left: 0;
+    height: 100%;
+  }
+
+  header .logo {
+    display: block;
+  }
+
+  header ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secondary-background-color);
+    color: var(--secondary-background-color);
+  }
+
+  header ul li {
+    color: var(--primary-text-color);
+    height: 120px;
+    width: 100px;
+    margin: 0;
+    padding: 0;
+  }
+  header .active {
+    background-color: var(--primary-background-color);
+  }
+
+  #reputation-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+
+  #price-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .price-table {
+    margin: 0 10px;
+  }
+
+  .testimonial-card p {
+    margin-left: 120px;
+    margin-top: 10px;
+  }
+
+  .photos-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .photo-list {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 0 5px;
+  }
+}
+

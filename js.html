@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Type</title>
+    <style>
+      #hp-bar {
+        width: 5px;
+        height: 100px;
+        background-color: greenyellow;
+        margin-top: 1rem;
+        transition: all 0.7s ease-out;
+      }
+    </style>
+    <script>
+      function init() {
+        // target the #para
+        document.getElementById('para').innerHTML = 'Hello World!';
+      }
+    </script>
+  </head>
+  <body onload="init()">
+    <div id="container">
+      <div id="para"></div>
+      <h1 id="score"></h1>
+      <h3 id="score-message"></h3>
+
+      <button onclick="count(5, 'red')">+</button>
+      <button onclick="reset()">Reset</button>
+      <button onclick="count(-5, 'green')">-</button>
+
+      <div id="hp-bar"></div>
+    </div>
+
+    <script>
+      // target the #para
+      document.getElementById('para').innerHTML = 'Hello World! IS me .';
+
+      var score = 5;
+      var scoreText = document.getElementById('score');
+      var scoreMessage = document.getElementById('score-message');
+      var hpBar = document.getElementById('hp-bar');
+
+      scoreText.innerHTML = score;
+      scoreText.style.color = 'blue';
+      scoreText.style.fontSize = '70px';
+
+      const increase = (value = 1) => {
+        score += value;
+
+        if (scoreText.style.color == 'blue') {
+          scoreText.style.color = 'red';
+          scoreText.innerHTML = score;
+          return;
+        }
+
+        if (scoreText.style.color == 'red') {
+          scoreText.style.color = 'blue';
+          scoreText.innerHTML = score;
+          return;
+        }
+      };
+
+      const decrease = (value = 1) => {
+        score -= value;
+        if (scoreText.style.color == 'blue') {
+          scoreText.style.color = 'red';
+          scoreText.innerHTML = score;
+          return;
+        }
+
+        if (scoreText.style.color == 'red') {
+          scoreText.style.color = 'blue';
+          scoreText.innerHTML = score;
+          return;
+        }
+      };
+
+      const count = (value , color) => {
+        if (score === 0) {
+          scoreMessage.innerHTML = "You HP is 0. You Are DEAD!"
+          return
+        }
+        score += value;
+        scoreText.innerHTML = score;
+        scoreText.style.color = color;
+
+        hpBar.style.width = `${score}px`;
+      }
+
+      const reset = () => {
+        score = 5;
+        scoreText.innerHTML = score;
+        scoreText.style.color = "blue";
+        hpBar.style.width = "5px"
+        scoreMessage.innerHTML = "";
+      }
+      
+    </script>
+  </body>
+</html>
